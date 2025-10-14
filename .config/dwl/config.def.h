@@ -39,7 +39,7 @@ static int log_level = WLR_ERROR;
 /* Autostart */
 static const char *const autostart[] = {
 	"/usr/bin/dunst", NULL,
-        "$SHELL", "-c", "sh ~/.scripts/monitor-config.sh", NULL,
+        "sh", "-c", "~/.scripts/monitor-config.sh", NULL,
         NULL /* terminate */
 };
 
