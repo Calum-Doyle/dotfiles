@@ -16,7 +16,7 @@
 	font = "JetBrainsMono Nerd Font"
 
 	# Point size of text.
-	font-size = 16 
+	font-size = 15
 
 	# Comma separated list of OpenType font feature settings to apply,
 	# if supported by the chosen font. The format is similar to the CSS
@@ -152,13 +152,13 @@
 
 	# Maximum number of results to display.
 	# If 0, tofi will draw as many results as it can fit in the window.
-	num-results = 0
+	num-results = 5
 
 	# Spacing between results in pixels. Can be negative.
-	result-spacing = 0
+	result-spacing = 5 
 
 	# List results horizontally.
-	horizontal = false
+	horizontal = true
 
 	# Minimum width of input in horizontal mode.
 	min-input-width = 0
@@ -167,8 +167,8 @@
 ### Window theming
 #
 	# Width and height of the window. Can be pixels or a percentage.
-	width = 1280
-	height = 720
+	width = 1910
+	height = 30
 
 	# Window background color
 	background-color = #1B1D1E
@@ -189,10 +189,10 @@
 	corner-radius = 0
 
 	# Padding between borders and text. Can be pixels or a percentage.
-	padding-top = 8
-	padding-bottom = 8
-	padding-left = 8
-	padding-right = 8
+	padding-top = 0
+	padding-bottom = 0
+	padding-left = 5
+	padding-right = 1
 
 	# Whether to clip text drawing to be within the specified padding. This
 	# is mostly important for allowing text to be inset from the border,
@@ -213,7 +213,7 @@
 	#
 	# Supported values: top-left, top, top-right, right, bottom-right,
 	# bottom, bottom-left, left, center.
-	anchor = center
+	anchor = top 
 
 	# Set the size of the exclusive zone.
 	#
@@ -227,7 +227,7 @@
 
 	# Window offset from edge of screen. Only has an effect when anchored
 	# to the relevant edge. Can be pixels or a percentage.
-	margin-top = 0
+	margin-top = 5
 	margin-bottom = 0
 	margin-left = 0
 	margin-right = 0
