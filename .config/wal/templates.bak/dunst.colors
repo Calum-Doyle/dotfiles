@@ -1,0 +1,16 @@
+[global]
+    frame_color = "{color2}"
+
+[urgency_low]
+    background = "{background}"
+    foreground = "{foreground}"
+
+[urgency_normal]
+    background = "{background}"
+    foreground = "{foreground}"
+
+[urgency_critical]
+    background = "{color2}"
+    foreground = "{foreground}"
+    frame_color = "{background}"
+

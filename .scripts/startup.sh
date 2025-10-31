@@ -1,3 +1,4 @@
 #!/bin/sh
 
-sh ~/.scripts/monitor-config.sh
+# set wallpaper
+sh ~/.scripts/theme/apply-wallpaper.sh

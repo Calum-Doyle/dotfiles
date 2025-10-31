@@ -1,0 +1,20 @@
+# Text colors
+text-color = {foreground}
+prompt-color = {color4}
+prompt-background = {background}
+placeholder-color = {color6}
+placeholder-background = {background}
+default-result-color = {color6}
+default-result-background = {background}
+# alternate-result-color = #FFFFFF
+# alternate-result-background = #000000
+selection-color = {color5}
+selection-background = {background}
+selection-match-color = {color4}
+# text-cursor-color = #FFFFFF
+# text-cursor-background = #000000
+
+# Window colors
+background-color = {background}
+outline-color = #080800
+border-color = {color2}

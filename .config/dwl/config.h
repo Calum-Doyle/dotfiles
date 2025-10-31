@@ -1,10 +1,6 @@
 #include <X11/XF86keysym.h>
+#include <colors.h>
 
-/* Taken from https://github.com/djpohly/dwl/issues/466 */
-#define COLOR(hex)    { ((hex >> 24) & 0xFF) / 255.0f, \
-                        ((hex >> 16) & 0xFF) / 255.0f, \
-                        ((hex >> 8) & 0xFF) / 255.0f, \
-                        (hex & 0xFF) / 255.0f }
 /* appearance */
 static const int sloppyfocus               = 1;  /* focus follows mouse */
 static const int bypass_surface_visibility = 0;  /* 1 means idle inhibitors will disable idle tracking even if it's surface isn't visible  */
@@ -13,22 +9,15 @@ static const int monoclegaps               = 0;  /* 1 means outer gaps in monocl
 static const unsigned int borderpx         = 1;  /* border pixel of windows */
 static const unsigned int gappih           = 8; /* horiz inner gap between windows */
 static const unsigned int gappiv           = 8; /* vert inner gap between windows */
-static const unsigned int gappoh           = 10; /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov           = 10; /* vert outer gap between windows and screen edge */
+static const unsigned int gappoh           = 6; /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov           = 6; /* vert outer gap between windows and screen edge */
 static const int showbar                   = 1; /* 0 means no bar */
 static const int topbar                    = 1; /* 0 means bottom bar */
 static const int vertpad                   = 5; /* vertical padding of bar */
 static const int sidepad                   = 5; /* horizontal padding of bar */
 static const char *fonts[]                 = {"JetBrainsMono Nerd Font Mono:style=Bold:size=16"};
-static const float rootcolor[]             = COLOR(0x000000ff);
 /* This conforms to the xdg-protocol. Set the alpha to zero to restore the old behavior */
 static const float fullscreen_bg[]         = {0.0f, 0.0f, 0.0f, 1.0f}; /* You can also use glsl colors */
-static uint32_t colors[][3]                = {
-	/*               fg          bg          border    */
-	[SchemeNorm] = { 0xbbbbbbff, 0x222222ff, 0x444444ff },
-	[SchemeSel]  = { 0xeeeeeeff, 0x005577ff, 0x005577ff },
-	[SchemeUrg]  = { 0,          0,          0x770000ff },
-};
 
 /* tagging */
 static char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -39,7 +28,7 @@ static int log_level = WLR_ERROR;
 /* Autostart */
 static const char *const autostart[] = {
 	"/usr/bin/dunst", NULL,
-        "$SHELL", "-c", "sh ~/.scripts/monitor-config.sh", NULL,
+        "sh", "-c", "~/.scripts/startup.sh", NULL,
         NULL /* terminate */
 };
 
@@ -144,13 +133,8 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *termcmd[] = { "foot", NULL };
-static const char *menucmd[] = { 
-				"wmenu-run",
-				"-f", "JetBrainsMono Nerd Font 16",
-				"-l", "10",
-				NULL 
-};
+static const char *termcmd[] = { "st", "-e", "zsh", NULL };
+static const char *menucmd[] = { "tofi-drun", "--drun-launch=true", NULL };
 
 static const char *mutevolume[] = {"/usr/bin/wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@", "toggle",  NULL};
 static const char *volumeup[] = {"/usr/bin/wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%+", NULL};

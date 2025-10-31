@@ -1,0 +1,20 @@
+background={colors.background.strip('#') | prepend('0x') | append('ff')}
+foreground={colors.foreground.strip('#') | prepend('0x') | append('ff')}
+cursor={colors.cursor.strip('#') | prepend('0x') | append('ff')}
+
+color0={colors.color0.strip('#') | prepend('0x') | append('ff')}
+color1={colors.color1.strip('#') | prepend('0x') | append('ff')}
+color2={colors.color2.strip('#') | prepend('0x') | append('ff')}
+color3={colors.color3.strip('#') | prepend('0x') | append('ff')}
+color4={colors.color4.strip('#') | prepend('0x') | append('ff')}
+color5={colors.color5.strip('#') | prepend('0x') | append('ff')}
+color6={colors.color6.strip('#') | prepend('0x') | append('ff')}
+color7={colors.color7.strip('#') | prepend('0x') | append('ff')}
+color8={colors.color8.strip('#') | prepend('0x') | append('ff')}
+color9={colors.color9.strip('#') | prepend('0x') | append('ff')}
+color10={colors.color10.strip('#') | prepend('0x') | append('ff')}
+color11={colors.color11.strip('#') | prepend('0x') | append('ff')}
+color12={colors.color12.strip('#') | prepend('0x') | append('ff')}
+color13={colors.color13.strip('#') | prepend('0x') | append('ff')}
+color14={colors.color14.strip('#') | prepend('0x') | append('ff')}
+color15={colors.color15.strip('#') | prepend('0x') | append('ff')}
