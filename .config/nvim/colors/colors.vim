@@ -1,0 +1,1 @@
+/home/user/.theme/current/colors/colors.vim
