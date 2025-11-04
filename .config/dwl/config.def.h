@@ -8,8 +8,8 @@ static const int bypass_surface_visibility = 0;  /* 1 means idle inhibitors will
 static const int smartgaps                 = 0;  /* 1 means no outer gap when there is only one window */
 static const int monoclegaps               = 0;  /* 1 means outer gaps in monocle layout */
 static const unsigned int borderpx         = 1;  /* border pixel of windows */
-static const unsigned int gappih           = 8; /* horiz inner gap between windows */
-static const unsigned int gappiv           = 8; /* vert inner gap between windows */
+static const unsigned int gappih           = 0; /* horiz inner gap between windows */
+static const unsigned int gappiv           = 0; /* vert inner gap between windows */
 static const unsigned int gappoh           = 6; /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov           = 6; /* vert outer gap between windows and screen edge */
 static const int showbar                   = 1; /* 0 means no bar */
@@ -37,9 +37,7 @@ static const char *const autostart[] = {
 /* NOTE: ALWAYS keep a rule declared even if you don't use rules (e.g leave at least one example) */
 static const Rule rules[] = {
 	/* app_id             title       tags mask     isfloating   monitor */
-	/* examples: */
-	{ "Gimp_EXAMPLE",     NULL,       0,            1,           -1 }, /* Start on currently visible tags floating, not tiled */
-	{ "firefox_EXAMPLE",  NULL,       1 << 8,       0,           -1 }, /* Start on ONLY tag "9" */
+	{ "firefox",	      NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -125,7 +123,7 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *termcmd[] = { "st", "-e", "zsh", NULL };
+static const char *termcmd[] = { "foot", "-e", "zsh", NULL };
 static const char *menucmd[] = { "tofi-drun", "--drun-launch=true", NULL };
 
 static const char *mutevolume[] = {"/usr/bin/wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@", "toggle",  NULL};
